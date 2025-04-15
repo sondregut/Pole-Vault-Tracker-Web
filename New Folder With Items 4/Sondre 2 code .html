@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing - Pole Vault Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#3176FF", secondary: "#1E293B" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Inter', sans-serif;
+      }
+      input:focus {
+      outline: none;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+      }
+      .toggle-checkbox:checked {
+      right: 0;
+      border-color: #10B981;
+      }
+      .toggle-checkbox:checked + .toggle-label {
+      background-color: #10B981;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 right-0 bg-gray-900 bg-opacity-95 z-50 px-6 py-4"
+    >
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a
+          href="https://readdy.ai/home/17d38d00-5903-4ab8-829b-2fe4273eee7b/6ec3eedd-430f-4fd0-a6b9-031786486c10"
+          data-readdy="true"
+          class="text-white font-['Pacifico'] text-2xl"
+          >Pole Vault Tracker</a
+        >
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            href="https://readdy.ai/home/17d38d00-5903-4ab8-829b-2fe4273eee7b/6ec3eedd-430f-4fd0-a6b9-031786486c10#features"
+            data-readdy="true"
+            class="text-gray-300 hover:text-white transition-colors"
+            >Features</a
+          >
+          <a
+            href="https://readdy.ai/home/17d38d00-5903-4ab8-829b-2fe4273eee7b/6ec3eedd-430f-4fd0-a6b9-031786486c10#preview"
+            data-readdy="true"
+            class="text-gray-300 hover:text-white transition-colors"
+            >Preview</a
+          >
+          <a href="#" class="text-primary font-medium">Pricing</a>
+          <a
+            href="https://readdy.ai/home/17d38d00-5903-4ab8-829b-2fe4273eee7b/a889452d-6542-4ada-8f04-0a7bbca355fe"
+            data-readdy="true"
+            class="text-gray-300 hover:text-white transition-colors"
+            >Support</a
+          >
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-gray-300 hover:text-white transition-colors"
+            >Log in</a
+          >
+          <a
+            href="#"
+            class="bg-primary text-white px-5 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap"
+            >Sign up</a
+          >
+        </div>
+        <button
+          class="md:hidden text-white w-10 h-10 flex items-center justify-center"
+        >
+          <i class="ri-menu-line ri-lg"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Pricing Header -->
+    <section class="pt-32 pb-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <a
+          href="https://readdy.ai/home/17d38d00-5903-4ab8-829b-2fe4273eee7b/6ec3eedd-430f-4fd0-a6b9-031786486c10"
+          data-readdy="true"
+          class="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6 transition-colors"
+        >
+          <i class="ri-arrow-left-line mr-2"></i> Back to Home
+        </a>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          Simple, Transparent Pricing
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+          Choose the plan that fits your training needs. All plans include a
+          14-day free trial.
+        </p>
+        <!-- Billing Toggle -->
+        <div class="flex items-center justify-center mb-12">
+          <span class="text-gray-600 mr-3">Monthly</span>
+          <div
+            class="relative inline-block w-14 h-7 transition duration-200 ease-in-out"
+          >
+            <input
+              type="checkbox"
+              id="billingToggle"
+              class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer transition-all duration-300 ease-in-out"
+            />
+            <label
+              for="billingToggle"
+              class="toggle-label block overflow-hidden h-7 rounded-full bg-gray-300 cursor-pointer transition-all duration-300 ease-in-out"
+            ></label>
+          </div>
+          <span class="text-gray-600 ml-3 flex items-center">
+            Annual
+            <span
+              class="ml-2 bg-primary bg-opacity-10 text-primary text-xs px-2 py-1 rounded-full"
+              >Save 20%</span
+            >
+          </span>
+        </div>
+      </div>
+    </section>
+    <!-- Pricing Plans -->
+    <section class="pb-20 -mt-6">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Free Plan -->
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden"
+          >
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-4">Free</h3>
+              <div class="flex items-end mb-6">
+                <span class="text-4xl font-bold">$0</span>
+                <span class="text-gray-500 ml-2 pb-1">/forever</span>
+              </div>
+              <p class="text-gray-600 mb-6">
+                Perfect for beginners tracking basic metrics.
+              </p>
+              <a
+                href="#"
+                class="block w-full py-3 border border-gray-300 text-center !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap"
+                >Get Started</a
+              >
+            </div>
+            <div class="border-t border-gray-100 px-8 py-6">
+              <h4 class="font-semibold mb-4">What's included:</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mr-3 mt-0.5"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-600"
+                    >Up to 10 jump records per month</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mr-3 mt-0.5"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-600">Basic performance tracking</span>
+                </li>
+                <li class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mr-3 mt-0.5"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-600"
+                    >Access to training library (limited)</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mr-3 mt-0.5"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-600">Single device access</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Basic Plan -->
+          <div
+            class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border border-primary border-opacity-50 transform md:-translate-y-4 overflow-hidden relative"
+          >
+            <div
+              class="absolute top-0 right-0 bg-primary text-white text-xs px-3 py-1 font-medium"
+            >
+              MOST POPULAR
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-4">Basic</h3>
+              <div class="flex items-end mb-6">
+                <span class="text-4xl font-bold monthly-price">$9.99</span>
+                <span class="text-4xl font-bold annual-price hidden"
+                  >$7.99</span
+                >
+                <span class="text-gray-500 ml-2 pb-1">/month</span>
+              </div>
+              <p class="text-gray-600 mb-6">
+                Great for dedicated athletes seeking improvement.
+              </p>
+              <a
+                href="#"
+                class="block w-full py-3 bg-primary text-white text-center !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap"
+                >Start 14-Day Free Trial</a
+              >
+            </div>
+            <div class="border-t border-gray-100 px-8 py-6">
+              <h4 class="font-semibold mb-4">Everything in Free, plus:</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mr-3 mt-0.5"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-600">Unlimited jump records</span>
+                </li>
+                <li class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mr-3 mt-0.5"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-600"
+                    >Advanced analytics and progress tracking</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mr-3 mt-0.5"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-600"
+                    >Full access to training library</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mr-3 mt-0.5"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-600"
+                    >Video upload (up to 5 per week)</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mr-3 mt-0.5"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-600">Multi-device access</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Pro Plan -->
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden"
+          >
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-4">Pro</h3>
+              <div class="flex items-end mb-6">
+                <span class="text-4xl font-bold monthly-price">$19.99</span>
+                <span class="text-4xl font-bold annual-price hidden"
+                  >$15.99</span
+                >
+                <span class="text-gray-500 ml-2 pb-1">/month</span>
+              </div>
+              <p class="text-gray-600 mb-6">
+                For elite athletes and serious coaches.
+              </p>
+              <a
+                href="#"
+                class="block w-full py-3 border border-gray-300 text-center !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap"
+                >Start 14-Day Free Trial</a
+              >
+            </div>
+            <div class="border-t border-gray-100 px-8 py-6">
+              <h4 class="font-semibold mb-4">Everything in Basic, plus:</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mr-3 mt-0.5"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-600">Coach collaboration tools</span>
+                </li>
+                <li class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mr-3 mt-0.5"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-600">Unlimited video uploads</span>
+                </li>
+                <li class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mr-3 mt-0.5"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-600"
+                    >AI-powered technique analysis</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mr-3 mt-0.5"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-600">Custom training programs</span>
+                </li>
+                <li class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mr-3 mt-0.5"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-gray-600">Priority support</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Feature Comparison -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Compare All Features</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            See exactly what's included in each plan to find the right fit for
+            your training needs.
+          </p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full min-w-[800px] border-collapse">
+            <thead class="bg-gray-50 sticky top-0">
+              <tr>
+                <th
+                  class="py-4 px-6 text-left font-semibold text-gray-700 border-b border-gray-200"
+                >
+                  Features
+                </th>
+                <th
+                  class="py-4 px-6 text-center font-semibold text-gray-700 border-b border-gray-200"
+                >
+                  Free
+                </th>
+                <th
+                  class="py-4 px-6 text-center font-semibold text-gray-700 border-b border-gray-200 bg-primary bg-opacity-5"
+                >
+                  Basic
+                </th>
+                <th
+                  class="py-4 px-6 text-center font-semibold text-gray-700 border-b border-gray-200"
+                >
+                  Pro
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Training Features -->
+              <tr class="bg-gray-50">
+                <td colspan="4" class="py-3 px-6 font-semibold text-gray-800">
+                  Training Features
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-6 border-b border-gray-100 text-gray-700">
+                  Jump Records
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  10 per month
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600 bg-primary bg-opacity-5"
+                >
+                  Unlimited
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  Unlimited
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-6 border-b border-gray-100 text-gray-700">
+                  Training Sessions
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  5 per month
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600 bg-primary bg-opacity-5"
+                >
+                  Unlimited
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  Unlimited
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-6 border-b border-gray-100 text-gray-700">
+                  Video Upload
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  <i class="ri-close-line text-gray-400"></i>
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600 bg-primary bg-opacity-5"
+                >
+                  5 per week
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  Unlimited
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-6 border-b border-gray-100 text-gray-700">
+                  Pole Inventory Management
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  Up to 3 poles
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600 bg-primary bg-opacity-5"
+                >
+                  Up to 15 poles
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  Unlimited
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-6 border-b border-gray-100 text-gray-700">
+                  Training Library Access
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  Limited
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600 bg-primary bg-opacity-5"
+                >
+                  Full Access
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  Full Access + Premium
+                </td>
+              </tr>
+              <!-- Analytics Features -->
+              <tr class="bg-gray-50">
+                <td colspan="4" class="py-3 px-6 font-semibold text-gray-800">
+                  Analytics Features
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-6 border-b border-gray-100 text-gray-700">
+                  Performance Tracking
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  Basic
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600 bg-primary bg-opacity-5"
+                >
+                  Advanced
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  Advanced
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-6 border-b border-gray-100 text-gray-700">
+                  Progress Reports
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  Monthly
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600 bg-primary bg-opacity-5"
+                >
+                  Weekly
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  Daily
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-6 border-b border-gray-100 text-gray-700">
+                  Technique Analysis
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  <i class="ri-close-line text-gray-400"></i>
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600 bg-primary bg-opacity-5"
+                >
+                  Basic
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  AI-Powered
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-6 border-b border-gray-100 text-gray-700">
+                  Competition Analysis
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  <i class="ri-close-line text-gray-400"></i>
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600 bg-primary bg-opacity-5"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </td>
+              </tr>
+              <!-- Support Features -->
+              <tr class="bg-gray-50">
+                <td colspan="4" class="py-3 px-6 font-semibold text-gray-800">
+                  Support & Collaboration
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-6 border-b border-gray-100 text-gray-700">
+                  Coach Collaboration
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  <i class="ri-close-line text-gray-400"></i>
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600 bg-primary bg-opacity-5"
+                >
+                  1 coach
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  Multiple coaches
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-6 border-b border-gray-100 text-gray-700">
+                  Support Response Time
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  48 hours
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600 bg-primary bg-opacity-5"
+                >
+                  24 hours
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  Priority (4 hours)
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-6 border-b border-gray-100 text-gray-700">
+                  Custom Training Programs
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  <i class="ri-close-line text-gray-400"></i>
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600 bg-primary bg-opacity-5"
+                >
+                  <i class="ri-close-line text-gray-400"></i>
+                </td>
+                <td
+                  class="py-3 px-6 border-b border-gray-100 text-center text-gray-600"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">What Our Subscribers Say</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Athletes and coaches share how our pricing delivers exceptional
+            value.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-8 rounded-lg shadow-sm">
+            <div class="flex items-center gap-1 text-yellow-400 mb-4">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "The Basic plan has everything I need as a collegiate athlete. The
+              unlimited jump tracking and video analysis features alone are
+              worth more than the monthly fee. I've improved my PR by 30cm since
+              using the app."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                <div
+                  class="w-full h-full flex items-center justify-center bg-primary bg-opacity-20"
+                >
+                  <i class="ri-user-line ri-lg text-primary"></i>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-semibold">Ethan Ramirez</h4>
+                <p class="text-sm text-gray-500">D1 Athlete, 5.20m PB</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-8 rounded-lg shadow-sm">
+            <div class="flex items-center gap-1 text-yellow-400 mb-4">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "As a high school coach, the Pro plan is an absolute game-changer.
+              The ability to collaborate with multiple athletes and analyze
+              their technique remotely has transformed our program. The ROI is
+              incredible."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                <div
+                  class="w-full h-full flex items-center justify-center bg-primary bg-opacity-20"
+                >
+                  <i class="ri-user-line ri-lg text-primary"></i>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-semibold">Samantha Wilson</h4>
+                <p class="text-sm text-gray-500">
+                  Head Coach, 3x State Champions
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-8 rounded-lg shadow-sm">
+            <div class="flex items-center gap-1 text-yellow-400 mb-4">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-half-fill"></i>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "I started with the Free plan to test the waters, and it provided
+              enough value that I quickly upgraded to Basic. The annual
+              subscription is a no-brainer for the savings. Best investment I've
+              made in my training."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                <div
+                  class="w-full h-full flex items-center justify-center bg-primary bg-opacity-20"
+                >
+                  <i class="ri-user-line ri-lg text-primary"></i>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-semibold">Marcus Johnson</h4>
+                <p class="text-sm text-gray-500">Club Athlete, 4.80m PB</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Get answers to common questions about our pricing and subscription
+            plans.
+          </p>
+        </div>
+        <div class="max-w-3xl mx-auto">
+          <div class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+              <button
+                class="faq-toggle w-full flex items-center justify-between p-5 text-left font-semibold focus:outline-none"
+              >
+                <span>How does the free trial work?</span>
+                <i
+                  class="ri-arrow-down-s-line ri-lg transition-transform duration-200"
+                ></i>
+              </button>
+              <div
+                class="faq-content hidden p-5 pt-0 text-gray-600 border-t border-gray-100"
+              >
+                <p>
+                  All paid plans (Basic and Pro) come with a 14-day free trial.
+                  You can sign up without a credit card, and you'll only be
+                  charged after your trial ends if you decide to continue. You
+                  can cancel anytime during the trial period with no obligation.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item 2 -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+              <button
+                class="faq-toggle w-full flex items-center justify-between p-5 text-left font-semibold focus:outline-none"
+              >
+                <span>Can I switch plans after subscribing?</span>
+                <i
+                  class="ri-arrow-down-s-line ri-lg transition-transform duration-200"
+                ></i>
+              </button>
+              <div
+                class="faq-content hidden p-5 pt-0 text-gray-600 border-t border-gray-100"
+              >
+                <p>
+                  Yes, you can upgrade or downgrade your plan at any time. If
+                  you upgrade, the new rate will be prorated for the remainder
+                  of your billing cycle. If you downgrade, the new rate will
+                  take effect at the start of your next billing cycle.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item 3 -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+              <button
+                class="faq-toggle w-full flex items-center justify-between p-5 text-left font-semibold focus:outline-none"
+              >
+                <span>What payment methods do you accept?</span>
+                <i
+                  class="ri-arrow-down-s-line ri-lg transition-transform duration-200"
+                ></i>
+              </button>
+              <div
+                class="faq-content hidden p-5 pt-0 text-gray-600 border-t border-gray-100"
+              >
+                <p>
+                  We accept all major credit cards (Visa, Mastercard, American
+                  Express, Discover), PayPal, and Apple Pay. For annual
+                  subscriptions, we can also accommodate purchase orders from
+                  educational institutions and sports organizations.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item 4 -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+              <button
+                class="faq-toggle w-full flex items-center justify-between p-5 text-left font-semibold focus:outline-none"
+              >
+                <span>Is there a refund policy?</span>
+                <i
+                  class="ri-arrow-down-s-line ri-lg transition-transform duration-200"
+                ></i>
+              </button>
+              <div
+                class="faq-content hidden p-5 pt-0 text-gray-600 border-t border-gray-100"
+              >
+                <p>
+                  We offer a 30-day money-back guarantee on all paid plans. If
+                  you're not satisfied with your subscription within the first
+                  30 days, contact our support team for a full refund. After 30
+                  days, refunds are provided on a prorated basis for annual
+                  subscriptions only.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item 5 -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+              <button
+                class="faq-toggle w-full flex items-center justify-between p-5 text-left font-semibold focus:outline-none"
+              >
+                <span>Do you offer team or school discounts?</span>
+                <i
+                  class="ri-arrow-down-s-line ri-lg transition-transform duration-200"
+                ></i>
+              </button>
+              <div
+                class="faq-content hidden p-5 pt-0 text-gray-600 border-t border-gray-100"
+              >
+                <p>
+                  Yes, we offer special pricing for teams, schools, and clubs
+                  with 5 or more users. Contact our sales team at
+                  sales@polevaulttracker.com for a custom quote and to discuss
+                  your specific needs.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item 6 -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+              <button
+                class="faq-toggle w-full flex items-center justify-between p-5 text-left font-semibold focus:outline-none"
+              >
+                <span>How do I cancel my subscription?</span>
+                <i
+                  class="ri-arrow-down-s-line ri-lg transition-transform duration-200"
+                ></i>
+              </button>
+              <div
+                class="faq-content hidden p-5 pt-0 text-gray-600 border-t border-gray-100"
+              >
+                <p>
+                  You can cancel your subscription at any time from your account
+                  settings. If you cancel, you'll still have access to your paid
+                  features until the end of your current billing period. We
+                  don't offer partial refunds for unused portions of your
+                  subscription period.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <div
+          class="inline-block bg-primary bg-opacity-20 text-primary px-4 py-2 rounded-full mb-4"
+        >
+          <span class="font-medium">30-Day Money-Back Guarantee</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Start Tracking Your Progress Today
+        </h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+          Join thousands of athletes who are reaching new heights with Pole
+          Vault Tracker.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+          <a
+            href="#"
+            class="bg-primary text-white px-8 py-4 !rounded-button font-medium text-lg hover:bg-opacity-90 transition-colors whitespace-nowrap"
+            >Start Your Free Trial</a
+          >
+          <a
+            href="#"
+            class="border border-white text-white px-8 py-4 !rounded-button font-medium text-lg hover:bg-white hover:bg-opacity-10 transition-colors whitespace-nowrap"
+            >Contact Sales</a
+          >
+        </div>
+        <p class="text-gray-400">
+          No credit card required. 14-day free trial. Cancel anytime.
+        </p>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <a
+              href="https://readdy.ai/home/17d38d00-5903-4ab8-829b-2fe4273eee7b/6ec3eedd-430f-4fd0-a6b9-031786486c10"
+              data-readdy="true"
+              class="text-white font-['Pacifico'] text-2xl mb-4 block"
+              >Pole Vault Tracker</a
+            >
+            <p class="text-gray-400 mb-4">
+              The ultimate companion for pole vaulters and coaches looking to
+              elevate their performance.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors w-10 h-10 flex items-center justify-center"
+              >
+                <i class="ri-instagram-line ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors w-10 h-10 flex items-center justify-center"
+              >
+                <i class="ri-twitter-x-line ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors w-10 h-10 flex items-center justify-center"
+              >
+                <i class="ri-facebook-circle-line ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors w-10 h-10 flex items-center justify-center"
+              >
+                <i class="ri-youtube-line ri-lg"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold mb-4">Product</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="https://readdy.ai/home/17d38d00-5903-4ab8-829b-2fe4273eee7b/6ec3eedd-430f-4fd0-a6b9-031786486c10#features"
+                  data-readdy="true"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Features</a
+                >
+              </li>
+              <li><a href="#" class="text-primary">Pricing</a></li>
+              <li>
+                <a
+                  href="https://readdy.ai/home/17d38d00-5903-4ab8-829b-2fe4273eee7b/6ec3eedd-430f-4fd0-a6b9-031786486c10#preview"
+                  data-readdy="true"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Preview</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold mb-4">Resources</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Training Tips</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Support Center</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold mb-4">Stay Updated</h3>
+            <p class="text-gray-400 mb-4">
+              Subscribe to our newsletter for the latest updates and training
+              tips.
+            </p>
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="bg-gray-700 text-white px-4 py-2 w-full border-none rounded-l-button focus:ring-0"
+              />
+              <button
+                class="bg-primary text-white px-4 py-2 !rounded-r-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400">
+            © 2025 Pole Vault Tracker. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"
+              >Terms of Service</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"
+              >Cookie Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Billing toggle functionality
+        const billingToggle = document.getElementById("billingToggle");
+        const monthlyPrices = document.querySelectorAll(".monthly-price");
+        const annualPrices = document.querySelectorAll(".annual-price");
+        billingToggle.addEventListener("change", function () {
+          if (this.checked) {
+            // Annual pricing
+            monthlyPrices.forEach((el) => el.classList.add("hidden"));
+            annualPrices.forEach((el) => el.classList.remove("hidden"));
+          } else {
+            // Monthly pricing
+            monthlyPrices.forEach((el) => el.classList.remove("hidden"));
+            annualPrices.forEach((el) => el.classList.add("hidden"));
+          }
+        });
+        // FAQ accordion functionality
+        const faqToggles = document.querySelectorAll(".faq-toggle");
+        faqToggles.forEach((toggle) => {
+          toggle.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector("i");
+            // Toggle the current FAQ item
+            content.classList.toggle("hidden");
+            icon.classList.toggle("rotate-180");
+            // Close other FAQ items
+            faqToggles.forEach((otherToggle) => {
+              if (otherToggle !== toggle) {
+                const otherContent = otherToggle.nextElementSibling;
+                const otherIcon = otherToggle.querySelector("i");
+                otherContent.classList.add("hidden");
+                otherIcon.classList.remove("rotate-180");
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
